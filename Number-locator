@@ -1,0 +1,14 @@
+#install the library 
+
+pip install phonenumbers
+import phonenumbers
+
+#Import the Geocoders
+from phonenumbers import geocoder
+
+#Insert a Phone Number here!
+p = input("Please insert your phone number with coutry code here:")
+phonenumber = phonenumbers.parse(p)
+
+#Display the location of the phone number
+print(geocoder.description_for_number(phonenumber,'en'))
